@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/whiteBackground"
+    tools:context="com.example.android.inventoryapp2.MainActivity">
+
+    <ListView
+        android:id="@+id/list"
+        style="@style/ListViewStyle"/>
+
+    <RelativeLayout
+        android:id="@+id/empty_view"
+        style="@style/EmptyView_containerRL_Style">
+
+        <ImageView
+            android:id="@+id/empty_screen_image"
+            style="@style/Empty_Screen_Dog_Picture_Style"
+            android:contentDescription="@string/just_a_funny_dog"
+            android:src="@drawable/dog"/>
+
+        <TextView
+            android:id="@+id/text1"
+            style="@style/Empty_Screen_TextView1_Style"
+            android:text="@string/amm_this_purple_button"/>
+
+        <TextView
+            android:id="@+id/text2"
+            style="@style/Empty_Screen_TextView2_Style"
+            android:text="@string/must_be_very_important"/>
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/fab"
+        style="@style/style_FAB"
+        android:contentDescription="@string/wanna_be_floating_action_button"
+        android:src="@drawable/circle"/>
+
+</RelativeLayout>

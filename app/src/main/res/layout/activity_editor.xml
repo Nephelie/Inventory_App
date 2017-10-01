@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              android:padding="10dp"
+              tools:context=".EditorActivity">
+
+    <ImageView
+        android:id="@+id/insert_image"
+        style="@style/InsertImage_style"
+        android:contentDescription="@string/picture_of_the_product"/>
+
+    <Button
+        android:id="@+id/button_select_image"
+        style="@style/takeAPicture_style"
+        android:text="@string/take_a_picture"/>
+
+    <LinearLayout
+        style="@style/HorizontalLinearLayout_style">
+
+        <TextView
+            style="@style/CategoryTextView_style"
+            android:text="@string/product"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:orientation="vertical"
+            android:paddingLeft="4dp">
+
+            <EditText
+                android:id="@+id/edit_text_name"
+                style="@style/EditTextStyle"
+                android:hint="@string/product_name_editText"
+                android:inputType="textCapWords"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/container_quantity"
+        style="@style/HorizontalLinearLayout_style">
+
+        <TextView
+            android:id="@+id/quantityTextView"
+            style="@style/CategoryTextView_style"
+            android:text="@string/Quantity"/>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:paddingLeft="4dp">
+
+            <EditText
+                android:id="@+id/edit_text_quantity"
+                style="@style/EditTextStyle"
+                android:hint="@string/quantity"
+                android:inputType="number"/>
+
+
+            <Button
+                android:id="@+id/button_increase_one"
+                style="@style/IncreaseQuantity_Button"
+                android:text="@string/plus"/>
+
+            <Button
+                android:id="@+id/button_decrease_one"
+                style="@style/DecreaseQuantity_Button"
+                android:text="@string/minus"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/container_measurement"
+        style="@style/HorizontalLinearLayout_style">
+
+        <TextView
+            style="@style/CategoryTextView_style"
+            android:text="@string/Price"/>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:paddingLeft="4dp">
+
+            <EditText
+                android:id="@+id/edit_text_price"
+                style="@style/EditTextStyle"
+                android:hint="@string/price"
+                android:inputType="number"/>
+
+            <TextView
+                android:id="@+id/dollar_sign"
+                style="@style/dollarSign_Style"
+                android:text="@string/dollar"/>
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/button_order"
+        style="@style/OrderButton_style"
+        android:text="@string/order"/>
+
+</LinearLayout>
